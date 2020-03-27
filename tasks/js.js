@@ -28,7 +28,7 @@ function jsTask() {
 // Function til at overvåge med
 function watchJS() {
     // Gulp watch tager tre parametre: hvad skal overvåges, nogle options og hvad skal der ske
-    return gulp.watch("src/js/*.js", {ignoreInitial: false}, jsTask);
+    return gulp.watch("src/js/**/*.js", {ignoreInitial: false}, jsTask);
 }
 
 // Eksporterer funktioner

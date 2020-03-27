@@ -4,11 +4,13 @@ const connect = require('gulp-connect');
 const { watchHTML, htmlTask } = require("./tasks/html");
 const { watchSCSS, sassTask } = require("./tasks/scss");
 const { watchJS, jsTask } = require("./tasks/js");
+const { watchImages, imageTask } = require("./tasks/images");
 
 function watch(done) {
     watchHTML();
     watchSCSS();
     watchJS();
+    watchImages();
 
     // Funktion til at starte server på port 8080
     connect.server({
@@ -24,6 +26,7 @@ function build(done) {
     htmlTask();
     sassTask(),
     jsTask(),
+    imageTask(),
     done();
 }
 
